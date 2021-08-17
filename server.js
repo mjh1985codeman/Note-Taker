@@ -1,4 +1,5 @@
 const express = require("express");
+const apiRoutes = require("./routes/apiRoutes");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -13,6 +14,14 @@ const app = express();
 // app.use("/api", apiRoutes);
 // // use htmlRoutes
 // app.use("/", htmlRoutes);
+
+app.use(apiRoutes);
+
+app.get("/", (req, res) => {
+  res.json({
+    config: "Success",
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}!`);
