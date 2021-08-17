@@ -1,0 +1,24 @@
+{
+  "name": "Note-Taker",
+  "version": "1.0.0",
+  "description": "AS A small business owner\r I WANT to be able to write and save notes\r SO THAT I can organize my thoughts and keep track of tasks I need to complete",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjh1985codeman/Note-Taker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjh1985codeman/Note-Taker/issues"
+  },
+  "homepage": "https://github.com/mjh1985codeman/Note-Taker#readme"
+}
