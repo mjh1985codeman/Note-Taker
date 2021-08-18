@@ -1,9 +1,8 @@
 const router = require("express").Router();
+const { notes } = require("../../db/db.json");
 
-router.get("/test", (req, res) => {
-  res.json({
-    name: "Hello There",
-  });
+router.get("/notes", (req, res) => {
+  res.json("Do You see Me? " + notes);
 });
 
 module.exports = router;
