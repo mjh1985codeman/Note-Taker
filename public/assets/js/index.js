@@ -182,6 +182,6 @@ if (window.location.pathname === "/notes") {
 
 getAndRenderNotes();
 
-module.exports = {
-  handleNoteSave,
-};
+// module.exports = {
+//   handleNoteSave,
+// };
