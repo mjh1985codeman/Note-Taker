@@ -33,11 +33,13 @@ router.delete("/notes/:id", (req, res) => {
   //assigns the id of the note that is being deleted to a variable.
   const deletedNoteId = req.params.id;
 
-  console.log(deletedNoteId);
+  //THIS ONE WORKED TO DELETE THE SPECIFIC NOTE!!!
+  //Checking each notes Id's and only keepting the ones whose Id's do NOT match the deletedNoteId.
+  const newDb = db.filter((noteEl) => noteEl.id !== deletedNoteId);
+  // console.log("deletedNoteId: " + deletedNoteId);
 
-  fs.writeFileSync("./db/db.json", JSON.stringify(db));
-
-  //writes the newly updated db.json file to the html.
+  //Writing the newDb to the JSON file.
+  fs.writeFileSync("./db/db.json", JSON.stringify(newDb));
 });
 
 module.exports = router;
