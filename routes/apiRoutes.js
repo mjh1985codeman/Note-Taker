@@ -28,14 +28,16 @@ router.post("/notes", (req, res) => {
 
 //Delete route.
 router.delete("/notes/:id", (req, res) => {
-  let noteId = uniqid();
   const db = JSON.parse(fs.readFileSync("./db/db.json"));
   res.json(db);
-  //THIS WILL NEED TO BE CHANGED.
-  console.log(req.params.id);
+  //assigns the id of the note that is being deleted to a variable.
+  const deletedNoteId = req.params.id;
+
+  console.log(deletedNoteId);
+
+  fs.writeFileSync("./db/db.json", JSON.stringify(db));
 
   //writes the newly updated db.json file to the html.
-  fs.writeFileSync("./db/db.json", JSON.stringify(db));
 });
 
 module.exports = router;
