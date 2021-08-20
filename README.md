@@ -24,3 +24,6 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 ## Deployed on Heroku:
 https://note-taker-85.herokuapp.com/
+
+## GitHub Project URL:
+https://github.com/mjh1985codeman/Note-Taker
